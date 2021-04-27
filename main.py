@@ -4,7 +4,7 @@ from linked_list import LinkedList
 from binary_tree import Binary_Tree
 
 months = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
-# pi is 3.14, so third index is month with pi day
+# pi is 3.14, so third month (index 2) is month with pi day
 print(months[2])
 
 birthday_locations = {"Arcade", "Park", "Skate West"}
@@ -41,7 +41,7 @@ new_tree.add_node(17, new_tree)
 new_tree.add_node(80, new_tree)
 new_tree.add_node(79, new_tree)
 print(new_tree.search_for_node(80, new_tree))
-print(new_tree.search_for_node(234, new_tree))
+print(new_tree.search_for_node(23, new_tree))
 new_tree.in_order(new_tree)
-print("\n\n\n")
+print("")
 new_tree.pre_order(new_tree)
