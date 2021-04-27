@@ -18,13 +18,24 @@ class Binary_Tree:
         return root
 
     def search_for_node(self, value, root):
-        if root is None:
-            return False
-        elif root.value == value:
-            return True
-        else:
-            if value > root.value:
-                return self.search_for_node(value, root.right)
+        if root:
+            if root.value == value:
+                return True
             else:
-                return self.search_for_node(value, root.left)
+                if value > root.value:
+                    return self.search_for_node(value, root.right)
+                else:
+                    return self.search_for_node(value, root.left)
+        return False
 
+    def in_order(self, root):
+        if root:
+            self.in_order(root.left)
+            print(root.value)
+            self.in_order(root.right)
+
+    def pre_order(self, root):
+        if root:
+            print(root.value)
+            self.pre_order(root.left)
+            self.pre_order(root.right)
